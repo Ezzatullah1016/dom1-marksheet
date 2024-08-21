@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            var un=document.getElementById("un").value;
+            var Pass=document.getElementById("Pass").value;
+            if(un =="Ezzat" && Pass =="1234"){
+            alert("Login Successfully!!!");
+            window.open("DOM.html");
+            }
+        else{
+            alert("Login Failed");
+        }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>UserName:</label>
+        <input type="text" id="un">
+        <br>
+        <br>
+        <label>Password:</label>
+        <input type="text" id="Pass">
+        <input type="button" value="Submit" onclick="abc()">
+    </form>
+    
+</body>
+</html>

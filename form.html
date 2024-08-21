@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var Name= document.getElementById("n").value;
+            var FatherName = document.getElementById("Fn").value;
+            var Roll_number = document.getElementById("rn").value;
+            var standard = document.getElementById("c").value;
+            var math= document.getElementById("mm").value;
+            var eng= document.getElementById("em").value;
+            var urdu= document.getElementById("um").value;
+            var chem= document.getElementById("cm").value;
+            var phy= document.getElementById("pm").value;
+            var obtain= parseInt(math)+ parseInt(urdu)+ parseInt(eng)+parseInt(chem)+parseInt(phy);
+            var percentage = obtain/500*100;
+            
+            var d1= document.getElementById("display1");
+            var d2= document.getElementById("display2");
+            var d3= document.getElementById("display3");
+            var d4= document.getElementById("display4");
+            var d5= document.getElementById("display5");
+            var d6= document.getElementById("display6");
+            var d7= document.getElementById("display7");
+            var d8= document.getElementById("display8");
+
+            d1.innerHTML= "Name: "+Name;
+            d2.innerHTML= "Father Name: "+ FatherName;
+            d3.innerHTML= "Roll Number: "+ Roll_number; 
+            d4.innerHTML= "Class: " + standard;
+            d5.innerHTML= "Obtained Marks: " + obtain;
+            d6.innerHTML= "Total Percentage: " + percentage + "%";
+
+            if(percentage >= 80){
+                d7.innerHTML = "Grade is (A+)"
+            }
+            else if(percentage < 80 && percentage>=70){
+                d7.innerHTML = "Grade is (A)"
+            }
+            else if (percentage < 70 && percentage >= 60){
+                d7.innerHTML = "Grade is (B)"
+            }   
+            else if (percentage < 60 && percentage >= 50){
+                d7.innerHTML = "Grade is (C)"
+            }
+            else{
+                d7.innerHTML="Failed0"
+            }
+
+
+
+
+            if(percentage >= 80){
+                d8.innerHTML = "Excellent"
+            }
+            else if(percentage < 80 && percentage>=70){
+                d8.innerHTML = "Very Good"
+            }
+            else if (percentage < 70 && percentage >= 60){
+                d8.innerHTML = "Good"
+            }   
+            else if (percentage < 60 && percentage >= 50){
+                d8.innerHTML = "Fair, try better again"
+            }
+            else{
+                d8.innerHTML="Failed, try again"
+            }
+
+           
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <table border="3">
+        <form>
+            <tr>
+                <th colspan="2">Markesheet</th>
+            </tr>
+            <tr>
+                <td> <label>Name:</label></td>
+                <td><input type="text" id="n"></td>
+                </tr>
+                <tr>
+                <td> <label>FatherName:</label></td>
+                <td><input type="text" id="Fn"></td>
+            </tr>
+            <tr>
+                <td> <label>Roll_number:</label></td>
+                <td><input type="text" id="rn"></td>
+            </tr>
+            <tr>
+                <td><label>Class:</label></td>
+                <td><input type="text" id="c"></td>
+            </tr>
+            <tr>
+                <td> <label >Math Marks:</label></td>
+                <td><input type="text" id="mm"></td>
+
+            </tr>
+            <tr>
+                <td><label >English Marks:</label></td>
+                <td><input type="text" id="em"></td>
+            </tr>
+            <tr>
+                <td><label>Chemistry Mrks:</label></td>
+                <td><input type="text" id="cm"></td>
+                <tr>
+                <td><label>Urdu Marks:</label></td>
+                <td><input type="text" id="um"></td>
+            </tr>
+            <tr>
+
+                <td><label>Physics Marks:</label></td>
+                <td><input type="text" id="pm"></td>
+            </tr>
+                <tr>
+                    <th colspan="2"> <input type="button" value="Submit" onclick="check()"></th>
+                </tr>
+            </tr>
+        </form>
+    </table>
+        <h2 id="display1"></h2>
+        <h2 id="display2"></h2>
+        <h2 id="display3"></h2>
+        <h2 id="display4"></h2>
+        <h2 id="display5"></h2>
+        <h2 id="display6"></h2>
+        <h2 id="display7"></h2>
+        <h2 id="display8"></h2>
+
+
+    
+</body>
+</html>
